@@ -1,0 +1,23 @@
+GET http://localhost:8080/albums HTTP/1.1
+
+
+###
+# Test success scenario
+GET http://localhost:8080/album/1 HTTP/1.1
+
+###
+# Test not found scenario
+GET http://localhost:8080/album/123123 HTTP/1.1
+
+###
+
+POST http://localhost:8080/album HTTP/1.1
+content-type: application/json
+
+
+{
+    "id": "4",
+		"title": "Best day ever",
+		"artist": "Mac Miller",
+		"price": 10.99
+}
